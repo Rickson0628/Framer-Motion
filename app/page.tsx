@@ -4,11 +4,13 @@ import PulsingButton from "./components/PulsingButton";
 import BouncingLoader from "./components/BouncingLoader";
 import DisappearingBox from "./components/DisappearingBox";
 import CardFlip from './components/CardFlip';
+import DragBox from "./components/DragBox";
+import AnimatedCard from './components/AnimatedCard';
 
 export default function Home() {
   return (
     <div>
-   
+{/*    
     <motion.div className="box" animate={{skew: 30}} /> 
  
     <motion.div className="box"  animate={{ x: [-50, 200, 0] }}
@@ -25,7 +27,9 @@ export default function Home() {
         <PulsingButton text={"Hello"} />
     <BouncingLoader /> 
     <DisappearingBox />
-    <CardFlip />
+    <CardFlip /> */}
+    {/* <DragBox /> */}
+    <AnimatedCard />
     </div>
 
   );
