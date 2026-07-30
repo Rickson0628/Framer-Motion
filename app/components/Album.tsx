@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion, stagger } from "motion/react";
+import { useState } from "react";
 
 const images = [
   {
@@ -26,10 +27,46 @@ const images = [
   },
 ];
 
+const containerVariants = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
+      delayChildren: stagger(0.08, { from: "last" }),
+    },
+  },
+
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      delayChildren: stagger(0.5),
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 20,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 260,
+      damping: 22,
+    },
+  },
+};
+
 const imageVariants = {
   rest: {
     scale: 1,
   },
+
   hover: {
     scale: 1.08,
   },
@@ -39,48 +76,72 @@ const overlayVariants = {
   rest: {
     opacity: 0,
   },
+
   hover: {
     opacity: 1,
   },
 };
 
 export default function Album() {
+  const [showImages, setShowImages] = useState(false);
+
   return (
-    <section className="grid w-full grid-cols-1 gap-4 p-10 sm:grid-cols-2 lg:grid-cols-3">
-      {images.map((image) => (
-        <motion.figure
-          key={image.source}
-          initial="rest"
-          animate="rest"
-          whileHover="hover"
-          className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-xl border border-black/80"
-        >
-          <motion.img
-            src={image.source}
-            alt={image.name}
-            loading="lazy"
-            draggable={false}
-            variants={imageVariants}
-            transition={{
-              duration: 0.5,
-              ease: "easeOut",
-            }}
-            className="h-full w-full object-cover"
-          />
+    <section className="w-full p-10">
+      <button
+        type="button"
+        aria-expanded={showImages}
+        onClick={() => setShowImages((previous) => !previous)}
+        className="mb-4 rounded-xl bg-black/80 p-4 text-white/80"
+      >
+        {showImages ? "Hide Images" : "Show Images"}
+      </button>
 
-          <motion.figcaption
-            variants={overlayVariants}
-            transition={{ duration: 0.3 }}
-            className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 p-5 text-center text-white"
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        animate={showImages ? "visible" : "hidden"}
+        className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+      >
+        {images.map((image) => (
+          <motion.figure
+            key={image.source}
+            variants={itemVariants}
+            className="aspect-[4/3] overflow-hidden rounded-2xl border border-black/80 shadow-xl"
           >
-            <h2 className="text-xl font-bold">{image.name}</h2>
+            <motion.div
+              initial="rest"
+              animate="rest"
+              whileHover="hover"
+              className="relative h-full w-full"
+            >
+              <motion.img
+                src={image.source}
+                alt={image.name}
+                loading="lazy"
+                draggable={false}
+                variants={imageVariants}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                }}
+                className="h-full w-full object-cover"
+              />
 
-            <p className="mt-2 text-sm text-white/80">
-              {image.caption}
-            </p>
-          </motion.figcaption>
-        </motion.figure>
-      ))}
+              <motion.figcaption
+                variants={overlayVariants}
+                transition={{ duration: 0.3 }}
+                className="absolute inset-0 flex flex-col items-center justify-center bg-black/60 p-5 text-center text-white"
+              >
+                <h2 className="text-xl font-bold">{image.name}</h2>
+
+                <p className="mt-2 text-sm text-white/80">
+                  {image.caption}
+                </p>
+              </motion.figcaption>
+            </motion.div>
+          </motion.figure>
+        ))}
+      </motion.div>
     </section>
   );
 }
