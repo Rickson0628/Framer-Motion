@@ -6,6 +6,7 @@ import DisappearingBox from "./components/DisappearingBox";
 import CardFlip from './components/CardFlip';
 import DragBox from "./components/DragBox";
 import AnimatedCard from './components/AnimatedCard';
+import Album from "./components/Album";
 
 export default function Home() {
   return (
@@ -29,7 +30,8 @@ export default function Home() {
     <DisappearingBox />
     <CardFlip /> */}
     {/* <DragBox /> */}
-    <AnimatedCard />
+    {/* <AnimatedCard /> */}
+    <Album />
     </div>
 
   );
