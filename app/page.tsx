@@ -7,6 +7,7 @@ import CardFlip from './components/CardFlip';
 import DragBox from "./components/DragBox";
 import AnimatedCard from './components/AnimatedCard';
 import Album from "./components/Album";
+import RangeSlider from "./components/RangeSlider";
 
 export default function Home() {
   return (
@@ -31,7 +32,8 @@ export default function Home() {
     <CardFlip /> */}
     {/* <DragBox /> */}
     {/* <AnimatedCard /> */}
-    <Album />
+    {/* <Album /> */}
+    <RangeSlider />
     </div>
 
   );

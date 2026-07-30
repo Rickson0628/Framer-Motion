@@ -22,6 +22,7 @@ export default function CardFlip() {
         initial="back"
         animate={isFlipped ? "back" : "front"}
         transition={{
+          
           duration: 1,
           ease: "easeInOut",
         }}
