@@ -8,6 +8,10 @@ import DragBox from "./components/DragBox";
 import AnimatedCard from './components/AnimatedCard';
 import Album from "./components/Album";
 import RangeSlider from "./components/RangeSlider";
+import TransformBox from "./components/TransformBox";
+import Landing from "./components/Landing";
+import RotatingBox from "./components/RotatingBox";
+import ScrollCard from "./components/ScrollCard";
 
 export default function Home() {
   return (
@@ -33,7 +37,11 @@ export default function Home() {
     {/* <DragBox /> */}
     {/* <AnimatedCard /> */}
     {/* <Album /> */}
-    <RangeSlider />
+    {/* <RangeSlider /> */}
+    {/*   */}
+    <Landing />
+    <RotatingBox />
+    <ScrollCard />
     </div>
 
   );
