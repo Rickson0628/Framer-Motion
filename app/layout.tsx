@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Kinetic — Motion UI Engineering Lab",
-    template: "%s | Kinetic",
+    default: "Motion Studies — Rickson Bozar",
+    template: "%s | Motion Studies",
   },
   description:
-    "An interactive frontend engineering portfolio exploring gesture, spring physics, scroll-linked animation, and accessible motion with Next.js and Motion.",
+    "A frontend animation portfolio by Rickson Bozar with reusable Motion components built in React and Next.js.",
   keywords: [
     "frontend developer",
     "creative developer",
@@ -34,16 +34,16 @@ export const metadata: Metadata = {
   creator: "Rickson Bozar",
   category: "technology",
   openGraph: {
-    title: "Kinetic — Motion UI Engineering Lab",
+    title: "Motion Studies — Rickson Bozar",
     description:
-      "A tactile collection of interaction studies built with Next.js, React, and Motion.",
+      "A curated collection of Motion studies with direct links to reusable React components.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kinetic — Motion UI Engineering Lab",
+    title: "Motion Studies — Rickson Bozar",
     description:
-      "A tactile collection of interaction studies built with Next.js, React, and Motion.",
+      "A curated collection of Motion studies with direct links to reusable React components.",
   },
 };
 

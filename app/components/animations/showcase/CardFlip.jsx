@@ -44,10 +44,10 @@ export default function CardFlip() {
       <div aria-hidden="true" className="visual-grid pointer-events-none absolute inset-0" />
       <div className="relative z-10 text-center">
         <p className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-[#ffe45c]">
-          Stateful 3D interaction
+          3D state transition
         </p>
         <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-          Click the card to inspect both sides
+          Click to explore both sides
         </h3>
       </div>
 
@@ -70,15 +70,15 @@ export default function CardFlip() {
             isFlipped ? (
               <CardFace
                 label="Back · 02"
-                title="State revealed"
-                description="The same control now communicates its alternate state."
+                title="Back state"
+                description="Click once more to return to the opening state."
                 className="bg-[#9f8cff] text-black"
               />
             ) : (
               <CardFace
                 label="Front · 01"
-                title="Flip the idea"
-                description="A physical metaphor makes a two-state interaction immediately understandable."
+                title="Front state"
+                description="Click the card to reveal its alternate side."
                 className="bg-[#ffe45c] text-black"
               />
             )
@@ -86,14 +86,14 @@ export default function CardFlip() {
             <>
               <CardFace
                 label="Front · 01"
-                title="Flip the idea"
-                description="A physical metaphor makes a two-state interaction immediately understandable."
+                title="Front state"
+                description="Click the card to reveal its alternate side."
                 className="bg-[#ffe45c] text-black"
               />
               <CardFace
                 label="Back · 02"
-                title="State revealed"
-                description="The same control now communicates its alternate state."
+                title="Back state"
+                description="Click once more to return to the opening state."
                 className="bg-[#9f8cff] text-black"
                 style={{ transform: "rotateY(180deg)" }}
               />

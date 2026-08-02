@@ -1,30 +1,28 @@
-# Kinetic — Motion UI Engineering Lab
+# Motion Studies
 
-Kinetic is an interactive frontend portfolio focused on one question: how can motion make a digital product easier to understand and more satisfying to use?
+[View the live project](https://motion-wine-alpha.vercel.app/)
 
-The experience combines spring physics, staggered transitions, drag gestures, scroll-linked storytelling, responsive composition, and reduced-motion support in one cohesive case study.
+Motion Studies is a frontend animation portfolio built with Motion, React, and Next.js. Six curated experiments form the main showcase, with direct source links that make every implementation easy to inspect, adapt, and reuse.
 
 ## Highlights
 
-- Six curated animation case studies imported directly into the portfolio
-- Scroll-linked transformations, responsive choreography, and staggered variants
-- Responsive layout across mobile, tablet, and desktop
-- `prefers-reduced-motion` support in both React and CSS
-- Keyboard-visible focus states and semantic controls
-- Recruiter-friendly project narrative, process, and source-code access
-- Direct GitHub source links for every showcased component
-- Optimized Geist fonts and production metadata through Next.js
+- Six curated studies displayed through their real working components
+- Scroll-linked motion, transforms, variants, springs, hover states, and 3D rotation
+- Direct GitHub links to every showcased component
+- Responsive layouts for mobile, tablet, and desktop
+- `prefers-reduced-motion` support and keyboard-friendly controls
+- Separate `showcase` and `experiments` folders for clear navigation
 
 ## Selected animation studies
 
-The portfolio intentionally presents only the strongest current studies:
+The main portfolio presents six selected animations:
 
-1. **Separating Picture** — responsive scroll choreography and layered transforms
-2. **Rotating Box** — one scroll value mapped to scale, rotation, and color
-3. **Scroll Card** — vertical progress mapped into responsive horizontal movement
-4. **Reveal Cards** — viewport-triggered variants and staggered entrances
-5. **Animated Album** — variants, staggered children, and hover states
-6. **Card Flip** — accessible state communicated through a spring-based 3D interaction
+1. **Separating Picture** — two images separate to reveal a responsive profile section
+2. **Rotating Box** — one scroll value controls scale, rotation, and color
+3. **Scroll Card** — vertical progress maps directly to horizontal movement
+4. **Reveal Cards** — one shared variant creates a staggered three-card sequence
+5. **Animated Album** — parent-child variants reveal an interactive image grid
+6. **Card Flip** — an accessible two-sided interaction with a spring-based 3D transition
 
 The six curated studies live in `app/components/animations/showcase`. Smaller practice exercises stay in `app/components/animations/experiments` without being presented as portfolio work.
 
@@ -90,10 +88,10 @@ app/
 └── page.tsx         # Clean route entry that imports the portfolio
 ```
 
-## Design approach
+## Development approach
 
-1. **Observe** — identify the state change and the information that deserves attention.
-2. **Choreograph** — map entrance, emphasis, and exit into a readable sequence.
-3. **Tune** — test spring behavior, interruption, responsive constraints, and motion preferences.
+1. Build each interaction as a focused, independent component.
+2. Test behavior across scrolling, clicking, hovering, and responsive layouts.
+3. Move the strongest studies into the showcase while continuing to refine the experiments.
 
-The animation files remain independent inside `showcase` and `experiments`, making each study easy to find, copy, reuse, and evolve.
+Every animation remains independent, making the code easy to find, understand, customize, and reuse.

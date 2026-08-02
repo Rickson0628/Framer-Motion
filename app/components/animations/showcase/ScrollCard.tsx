@@ -64,7 +64,7 @@ const ScrollCard = () => {
           {/* Main heading */}
           <div>
             <p className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-blue-300">
-              Vertical input · horizontal output
+              Scroll input · horizontal output
             </p>
 
             <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
@@ -74,7 +74,7 @@ const ScrollCard = () => {
 
           {/* Description beside the heading */}
           <p className="hidden max-w-56 text-right text-sm leading-6 text-white/45 sm:block">
-            The animation remains tied directly to scroll progress.
+            The card remains directly synchronized with page progress.
           </p>
         </div>
 
@@ -114,19 +114,18 @@ const ScrollCard = () => {
               <article className="relative flex min-h-56 flex-col justify-between rounded-[1.75rem] bg-blue-500 p-6 text-[#07101f] shadow-2xl sm:p-8">
                 {/* Card label container */}
                 <div className="flex items-center justify-between font-mono text-[0.62rem] uppercase tracking-[0.14em] text-black/50">
-                  <span>Motion value</span>
+                  <span>Scroll progress</span>
                   <span>01</span>
                 </div>
 
                 {/* Card text container */}
                 <div>
                   <h4 className="text-2xl font-bold tracking-[-0.04em]">
-                    Scroll-linked card
+                    Mapped horizontal motion
                   </h4>
 
                   <p className="mt-3 text-sm leading-6 text-black/65">
-                    Movement stops exactly when scrolling stops—no
-                    detached timeline.
+                    When scrolling pauses, the animation pauses with it.
                   </p>
                 </div>
               </article>

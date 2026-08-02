@@ -15,23 +15,23 @@ const images = [
   {
     source:
       "https://i.pinimg.com/236x/79/37/69/7937691ef4860364d7379a42c743c44c.jpg",
-    name: "Soft Beginnings",
+    name: "Opening Frame",
     caption:
-      "Every beautiful journey begins with one quiet, unforgettable moment.",
+      "The first card establishes the sequence.",
   },
   {
     source:
       "https://i.pinimg.com/736x/85/81/f3/8581f3e1b6bb05a8557bf13f4e096100.jpg",
-    name: "Between Moments",
+    name: "Second Beat",
     caption:
-      "Sometimes the memories that matter most are found in the pauses.",
+      "A short delay gives the next card its own moment.",
   },
   {
     source:
       "https://plus.unsplash.com/premium_photo-1676320526001-07b75bd19ae3?fm=jpg&q=60&w=3000&auto=format&fit=crop",
-    name: "Golden Horizon",
+    name: "Hover Detail",
     caption:
-      "Even the longest day leaves behind a little warmth and light.",
+      "Hovering enlarges the image and reveals the supporting copy.",
   },
 ];
 

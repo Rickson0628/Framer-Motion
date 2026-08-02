@@ -94,12 +94,12 @@ export default function Landing() {
         <div className="section-shell relative py-24">
           {/* Green eyebrow: monospace, extra-small, uppercase, widely spaced text. */}
           <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#c9ff63]">
-            Rickson Bozar · Frontend motion
+            Rickson Bozar · Frontend development &amp; motion
           </p>
           {/* clamp() makes the heading fluid from 4.2rem to 9rem by viewport width. */}
           <h1 className="mt-7 max-w-6xl text-[clamp(4.2rem,11vw,9rem)] font-semibold leading-[0.83] tracking-[-0.075em]">
             {/* This span changes only these words to the orange accent color. */}
-            Motion studies, shown as <span className="text-[#ff6846]">working code.</span>
+            Exploring Motion through <span className="text-[#ff6846]">working interfaces.</span>
           </h1>
           {/*
             INTRO ROW
@@ -109,11 +109,11 @@ export default function Landing() {
           <div className="mt-10 grid max-w-5xl gap-8 border-t border-white/10 pt-8 md:grid-cols-[1fr_auto] md:items-end">
             {/* Muted paragraph: white/58 is translucent white; leading is line height. */}
             <p className="max-w-2xl text-base leading-7 text-white/58 sm:text-lg sm:leading-8">
-              Six selected experiments from my Motion practice. Each study demonstrates a distinct, reusable interaction technique and links directly to its implementation.
+              A curated collection of six animation studies built with Motion, React, and Next.js. Each study links directly to its component, making the implementation easy to inspect, adapt, and reuse.
             </p>
             {/* button-primary is in globals.css; w-fit prevents a full-width button. */}
             <a href="#animation-01" className="button-primary w-fit">
-              View selected work
+              Explore the studies
             </a>
           </div>
         </div>
@@ -133,8 +133,8 @@ export default function Landing() {
         id="animation-01"
         number="01"
         title="Separating Picture"
-        summary="One image becomes a responsive, scroll-directed composition with different choreography for desktop, tablet, and mobile."
-        definition="The strongest study in the project: it combines viewport-aware behavior, several mapped motion values, layered imagery, and a complete narrative reveal."
+        summary="Two images separate as the page scrolls, revealing a profile section with choreography adapted for smaller screens."
+        definition="This study combines scroll tracking, responsive layout, and several coordinated transforms in one focused interaction."
         sourcePath="app/components/animations/showcase/SeparatingPicture.tsx"
         tags={["useScroll", "useTransform", "responsive"]}
         accent="#ff6846"
@@ -147,8 +147,8 @@ export default function Landing() {
         id="animation-02"
         number="02"
         title="Rotating Box"
-        summary="A single scroll value controls rotation, scale, and color while the interface exposes those values in real time."
-        definition="This earns its place because the animation makes the relationship between input and output visible—a useful demonstration of MotionValue composition."
+        summary="Scroll progress drives the box's rotation, scale, and color while each value updates in real time."
+        definition="A single MotionValue coordinates several visual properties and displays each result as it changes."
         sourcePath="app/components/animations/showcase/RotatingBox.tsx"
         tags={["MotionValue", "scroll mapping", "color"]}
         accent="#c9ff63"
@@ -161,8 +161,8 @@ export default function Landing() {
         id="animation-03"
         number="03"
         title="Scroll Card"
-        summary="Vertical page progress becomes horizontal movement inside a responsive track, with no independent animation timeline."
-        definition="This study demonstrates direct input mapping: the card, rotation, and progress indicator all remain synchronized with the user's scroll position."
+        summary="Vertical scroll progress becomes horizontal card movement, with rotation and progress remaining synchronized."
+        definition="This study maps one input across multiple outputs without relying on a separate timeline."
         sourcePath="app/components/animations/showcase/ScrollCard.tsx"
         tags={["useScroll", "responsive", "progress"]}
         accent="#5ca9ff"
@@ -175,8 +175,8 @@ export default function Landing() {
         id="animation-04"
         number="04"
         title="Reveal Cards"
-        summary="A viewport-triggered sequence gives three related ideas a readable entrance without turning them into separate animations."
-        definition="The component uses one reusable variant with custom indices, spring settling, reduced-motion support, and a responsive grid."
+        summary="Three cards reveal in sequence as they enter the viewport, using one shared variant with staggered timing."
+        definition="A shared variant and custom index create a clear sequence with very little repeated code."
         sourcePath="app/components/animations/showcase/RevealCard.tsx"
         tags={["whileInView", "variants", "stagger"]}
         accent="#63e7ff"
@@ -189,8 +189,8 @@ export default function Landing() {
         id="animation-05"
         number="05"
         title="Animated Album"
-        summary="A compact interaction system combining parent-child variants, staggered entrances, and hover-driven image treatment."
-        definition="The album demonstrates reusable orchestration rather than one isolated effect: state controls the group, while each card owns its entrance and hover behavior."
+        summary="A button reveals an image grid through staggered entrances, while each card handles its own hover state."
+        definition="Parent-child variants control the entrance sequence while each image manages its own interaction."
         sourcePath="app/components/animations/showcase/Album.tsx"
         tags={["variants", "stagger", "hover"]}
         accent="#9f8cff"
@@ -205,8 +205,8 @@ export default function Landing() {
         id="animation-06"
         number="06"
         title="Card Flip"
-        summary="A two-state interface uses perspective and spring rotation to make the change feel physical and immediately understandable."
-        definition="This interaction earns its place through genuine front-and-back geometry, keyboard accessibility, visible state, and a reduced-motion fallback."
+        summary="A two-sided card uses perspective and spring rotation to make a simple state change feel physical."
+        definition="The interaction combines 3D motion with button state, keyboard access, and a reduced-motion fallback."
         sourcePath="app/components/animations/showcase/CardFlip.jsx"
         tags={["3D", "spring", "accessible state"]}
         accent="#ffe45c"

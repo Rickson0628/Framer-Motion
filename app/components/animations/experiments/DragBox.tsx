@@ -16,7 +16,7 @@ const DragBox = () => {
 
       {/* OPTIONAL DRAG VERSION: uncomment this block and remove the active box below. */}
       {/* <motion.div className='bg-amber-400 w-20 h-30 p-4' drag dragConstraints={{ top:10, bottom:10, left:10, right:10 }}>
-          Drag Me
+          Drag this
       </motion.div> */}
       
 

@@ -103,7 +103,7 @@ export default function AnimationCaseStudy({
         <aside className="rounded-[1.5rem] border border-white/10 bg-white/[0.035] p-5">
           {/* Small muted uppercase label introducing the explanation. */}
           <p className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-white/38">
-            Why it is here
+            Key techniques
           </p>
           {/* definition comes from this study's props in Landing. */}
           <p className="mt-3 text-sm leading-6 text-white/65">{definition}</p>

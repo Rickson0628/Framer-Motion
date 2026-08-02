@@ -150,19 +150,16 @@ const SeparatingPicture = () => {
             }}
           >
             <p className="mb-3 text-sm uppercase tracking-[0.35em] text-blue-400">
-              Get to know me
+              Hello, I&apos;m
             </p>
 
             <h2 className="text-[clamp(3rem,7vw,6rem)] font-bold">
-              About Me
+              Rickson
             </h2>
 
             {/* CHANGE THIS COPY, then make the same edit in the mobile block below. */}
             <p className="mx-auto mt-5 max-w-lg leading-7 text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              A full-stack developer who learns by building. This portfolio highlights my work with React, Next.js, Motion, reusable components, and responsive animation patterns, while showing how I approach design, problem-solving, and clean code. The examples are also structured so other developers can inspect, adapt, and reuse the code in their own projects.
             </p>
           </motion.div>
 
@@ -223,19 +220,19 @@ const SeparatingPicture = () => {
             }}
           >
             <p className="mb-3 text-xs uppercase tracking-[0.25em] text-blue-400 sm:text-sm">
-              Get to know me
+              About the developer
             </p>
 
             <h2 className="text-[clamp(2.5rem,10vw,4.5rem)] font-bold">
-              About Me
+              Rickson Bozar
             </h2>
 
             {/* Keep this content in sync with the desktop copy above. */}
             <p className="mx-auto mt-4 text-sm leading-6 text-gray-400 sm:text-base sm:leading-7">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-              ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              A frontend developer focused on learning through hands-on
+              projects. This portfolio explores Motion, reusable React
+              component structure, and animation patterns that other
+              developers can inspect and adapt.
             </p>
           </motion.div>
 

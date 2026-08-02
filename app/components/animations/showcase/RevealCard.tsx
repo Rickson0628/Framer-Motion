@@ -14,19 +14,19 @@ const cards = [
   {
     number: "01",
     title: "Enter",
-    description: "Opacity and vertical distance establish the direction of the reveal.",
+    description: "Each card begins lower, smaller, and transparent.",
     accent: "#63e7ff",
   },
   {
     number: "02",
     title: "Sequence",
-    description: "A stagger gives each item its own moment without slowing the group down.",
+    description: "The card index adds a short delay, creating a clear sequence.",
     accent: "#9f8cff",
   },
   {
     number: "03",
     title: "Settle",
-    description: "A spring finishes the movement with weight instead of a rigid stop.",
+    description: "A spring brings each card into place with a softer finish.",
     accent: "#ff8ac1",
   },
 ] as const;
@@ -61,14 +61,14 @@ const RevealCard = () => {
         <div className="mb-12 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <p className="font-mono text-[0.65rem] uppercase tracking-[0.18em] text-[#63e7ff]">
-              Viewport orchestration
+              Staggered entrance
             </p>
             <h3 className="mt-3 text-3xl font-semibold tracking-[-0.04em] sm:text-4xl">
-              One entrance, three beats
+              One variant, three moments
             </h3>
           </div>
           <p className="max-w-sm text-sm leading-6 text-white/45">
-            Scroll the cards into view. The same variant is reused with a different custom index.
+            Each card reuses the same animation while its index controls the delay.
           </p>
         </div>
 
