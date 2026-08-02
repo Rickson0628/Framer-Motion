@@ -1,8 +1,16 @@
 "use client";
 
-import { motion, stagger } from "motion/react";
+import { motion, stagger, type Variants } from "motion/react";
 import { useState } from "react";
 
+/**
+ * COPY/PASTE NOTES
+ * - Replace or add objects in images; the cards render automatically.
+ * - Change stagger(0.5) to control the delay between cards appearing.
+ * - Tune itemVariants for the entrance and imageVariants for the hover zoom.
+ * - These remote image URLs must remain publicly available; local images are safer.
+ */
+// CHANGE THIS: each object supplies one card's image, alt text, title, and caption.
 const images = [
   {
     source:
@@ -27,7 +35,7 @@ const images = [
   },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {
     opacity: 0,
     transition: {
@@ -40,12 +48,13 @@ const containerVariants = {
     opacity: 1,
     transition: {
       when: "beforeChildren",
-      delayChildren: stagger(0.5),
+      delayChildren: stagger(0.5), // CHANGE THIS for faster or slower card spacing.
     },
   },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
+  // CHANGE THIS starting position to reveal from another direction.
   hidden: {
     opacity: 0,
     y: 20,
@@ -62,17 +71,17 @@ const itemVariants = {
   },
 };
 
-const imageVariants = {
+const imageVariants: Variants = {
   rest: {
     scale: 1,
   },
 
   hover: {
-    scale: 1.08,
+    scale: 1.08, // CHANGE THIS to strengthen or soften the image zoom.
   },
 };
 
-const overlayVariants = {
+const overlayVariants: Variants = {
   rest: {
     opacity: 0,
   },
@@ -83,6 +92,7 @@ const overlayVariants = {
 };
 
 export default function Album() {
+  // This state controls the whole group; each child receives its own variant.
   const [showImages, setShowImages] = useState(false);
 
   return (

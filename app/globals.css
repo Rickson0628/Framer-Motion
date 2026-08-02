@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #08090d;
+  --foreground: #f4f1e8;
 }
 
 @theme inline {
@@ -12,24 +12,88 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
+  min-width: 320px;
+  margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #c9ff63;
+  color: #08090d;
 }
 
 @layer components {
-  .box {
-    @apply size-15 bg-black dark:bg-white m-10;
+  .section-shell {
+    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-12;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[0.66rem] uppercase tracking-[0.22em] text-[#ff6846];
+  }
+
+  .section-title {
+    @apply max-w-3xl text-[clamp(2.7rem,6vw,5.7rem)] font-semibold leading-[0.94] tracking-[-0.06em] text-balance;
+  }
+
+  .button-primary,
+  .button-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3.5 text-sm font-medium transition-[transform,background-color,border-color,color] duration-300 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9ff63];
+  }
+
+  .button-primary {
+    @apply bg-[#f4f1e8] text-[#0b0c10] hover:-translate-y-1 hover:bg-white;
+  }
+
+  .button-secondary {
+    @apply border border-white/10 bg-white/[0.035] text-white/75 hover:-translate-y-1 hover:border-white/25 hover:text-white;
+  }
+
+  .nav-link {
+    @apply rounded-sm font-mono text-[0.62rem] uppercase tracking-[0.18em] text-white/45 transition-colors hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c9ff63];
+  }
+
+  .visual-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.055) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(to bottom, black, transparent 94%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

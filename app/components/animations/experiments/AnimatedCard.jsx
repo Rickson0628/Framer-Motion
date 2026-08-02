@@ -1,5 +1,15 @@
+"use client";
+
 import { motion } from 'motion/react'
 
+/**
+ * MOTION COPY/PASTE COMPONENT
+ * Copy this file into a React/Next.js project after running `npm install motion`.
+ * Keep "use client" for its hover, tap, and drag interactions.
+ * Reuse it with: <DogCard name="..." description="..." imageSrc="..." />.
+ */
+
+// CHANGE THIS: these values are used only when the matching props are omitted.
 const defaultDescription =
   "A playful and loyal companion with a gentle personality, bright eyes, and endless enthusiasm for outdoor adventures.";
 
@@ -12,6 +22,7 @@ export default function DogCard({
   imageSrc = defaultImage,
 }) {
   return (
+    // CHANGE THIS interaction block to tune hover, tap, drag, and spring behavior.
     <motion.article className="w-full max-w-sm overflow-hidden rounded-2xl border border-black/10 bg-white shadow-xl"
     drag
     whileHover={{
@@ -30,6 +41,7 @@ export default function DogCard({
     transition={{type:"spring", damping:20, stiffness:300 }}
       >
 
+      {/* Replace imageSrc through props; keep useful alt text for accessibility. */}
       <img
         src={imageSrc}
         alt={`${name}, a playful dog`}
