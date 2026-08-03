@@ -56,11 +56,11 @@ export default function Landing() {
           <a href="#top" className="flex items-center gap-3">
             {/* Orange initials badge: bg is background; text-black is text color. */}
             <span className="flex size-7 items-center justify-center rounded-full bg-[#ff6846] text-[0.64rem] font-bold text-black">
-              RB
+              RX
             </span>
             {/* Small uppercase brand text; tracking controls space between letters. */}
             <span className="font-mono text-[0.66rem] uppercase tracking-[0.2em] text-white/75">
-              Motion studies
+              Motion Components
             </span>
           </a>
           {/* Hidden on mobile; sm:flex shows navigation at the small breakpoint upward. */}
@@ -109,11 +109,11 @@ export default function Landing() {
           <div className="mt-10 grid max-w-5xl gap-8 border-t border-white/10 pt-8 md:grid-cols-[1fr_auto] md:items-end">
             {/* Muted paragraph: white/58 is translucent white; leading is line height. */}
             <p className="max-w-2xl text-base leading-7 text-white/58 sm:text-lg sm:leading-8">
-              A curated collection of six animation studies built with Motion, React, and Next.js. Each study links directly to its component, making the implementation easy to inspect, adapt, and reuse.
+              Six animation built with Motion, React, and Next.js. Each animation links directly to its component, making the implementation easy to inspect, adapt, and reuse.
             </p>
             {/* button-primary is in globals.css; w-fit prevents a full-width button. */}
             <a href="#animation-01" className="button-primary w-fit">
-              Explore the studies
+              Explore the animations
             </a>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function Landing() {
         number="01"
         title="Separating Picture"
         summary="Two images separate as the page scrolls, revealing a profile section with choreography adapted for smaller screens."
-        definition="This study combines scroll tracking, responsive layout, and several coordinated transforms in one focused interaction."
+        definition="This animation combines scroll tracking, responsive layout, and several coordinated transforms in one focused interaction."
         sourcePath="app/components/animations/showcase/SeparatingPicture.tsx"
         tags={["useScroll", "useTransform", "responsive"]}
         accent="#ff6846"
@@ -162,7 +162,7 @@ export default function Landing() {
         number="03"
         title="Scroll Card"
         summary="Vertical scroll progress becomes horizontal card movement, with rotation and progress remaining synchronized."
-        definition="This study maps one input across multiple outputs without relying on a separate timeline."
+        definition="This animation maps one input across multiple outputs without relying on a separate timeline."
         sourcePath="app/components/animations/showcase/ScrollCard.tsx"
         tags={["useScroll", "responsive", "progress"]}
         accent="#5ca9ff"
