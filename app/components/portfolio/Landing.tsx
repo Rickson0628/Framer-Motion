@@ -94,7 +94,7 @@ export default function Landing() {
         <div className="section-shell relative py-24">
           {/* Green eyebrow: monospace, extra-small, uppercase, widely spaced text. */}
           <p className="font-mono text-xs uppercase tracking-[0.22em] text-[#c9ff63]">
-            Rickson Bozar · Frontend development &amp; motion
+            Rickson Bozar · Frontend Development &amp; motion
           </p>
           {/* clamp() makes the heading fluid from 4.2rem to 9rem by viewport width. */}
           <h1 className="mt-7 max-w-6xl text-[clamp(4.2rem,11vw,9rem)] font-semibold leading-[0.83] tracking-[-0.075em]">
